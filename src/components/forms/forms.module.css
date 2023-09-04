@@ -1,0 +1,38 @@
+.formcontrol {
+    display: flex;
+    flex-direction: column;
+    margin-block-end: 1rem;
+}
+
+.label {
+    font-size: var(--fs-200);
+}
+
+.input {
+    font-size: var(--fs-200);
+    padding: 0.1em 0.2em;
+}
+
+.input:invalid {
+    border-color: var(--color-error);
+}
+
+.textarea {
+    font-size: var(--fs-300);
+    padding: 0.1em 0.2em;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+    color: var(--color-error);
+    font-size: var(--fs-200);
+    border-inline-start: 3px solid var(--color-error);
+    padding-inline-start: 0.75em;
+    margin-block-start: 0.2em;
+}
+
+.submit {
+    background-color: var(--color-primary);
+}
