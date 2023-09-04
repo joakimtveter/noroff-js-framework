@@ -11,7 +11,7 @@ import Homepage from '@/pages/homePage';
 import ProductPage from '@/pages/productPage';
 import ContactPage from '@/pages/contactPage';
 import CartPage from '@/pages/cartPage';
-// import SuccessPage from '@/pages/successPage';
+import SuccessPage from '@/pages/successPage';
 import ErrorPage from '@/pages/errorPage';
 
 // Import Global Styles
@@ -35,10 +35,10 @@ const router = createBrowserRouter([
         path: 'cart',
         element: <CartPage />,
     },
-    // {
-    //     path: 'checkout-success',
-    //     element: <SuccessPage />,
-    // },
+    {
+        path: 'checkout-success',
+        element: <SuccessPage />,
+    },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
