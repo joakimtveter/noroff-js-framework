@@ -6,7 +6,7 @@ import formatCurrency from '@/lib/utils/formatCurrency';
 import styles from './product-card.module.css';
 
 function ProductCard(props: Product) {
-    const { description, discountedPrice, id, imageUrl, price, rating, reviews, tags, title } = props;
+    const { description, discountedPrice, id, imageUrl, price, title } = props;
     const isDiscounted = price > discountedPrice;
     const discount = Math.round(((price - discountedPrice) / price) * 100);
 
