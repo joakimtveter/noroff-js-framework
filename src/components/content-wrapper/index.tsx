@@ -1,11 +1,5 @@
 import styles from './content-wrapper.module.css';
 
-interface ContentWrapperProps {
-    children: React.ReactNode;
+export default function ContentWrapper({ children }: { children: React.ReactNode }) {
+    return <div className={styles.wrapper}>{children}</div>;
 }
-
-function ContentWrapper(props: ContentWrapperProps) {
-    return <div className={styles.wrapper}>{props.children}</div>;
-}
-
-export default ContentWrapper;

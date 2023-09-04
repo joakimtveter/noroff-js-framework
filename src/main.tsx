@@ -10,7 +10,7 @@ import { store } from '@/redux/store';
 import Homepage from '@/pages/homePage';
 import ProductPage from '@/pages/productPage';
 // import ContactPage from '@/pages/contactPage';
-// import CartPage from '@/pages/cartPage';
+import CartPage from '@/pages/cartPage';
 // import SuccessPage from '@/pages/successPage';
 import ErrorPage from '@/pages/errorPage';
 
@@ -31,10 +31,10 @@ const router = createBrowserRouter([
     //     path: 'contact',
     //     element: <ContactPage />,
     // },
-    // {
-    //     path: 'cart',
-    //     element: <CartPage />,
-    // },
+    {
+        path: 'cart',
+        element: <CartPage />,
+    },
     // {
     //     path: 'checkout-success',
     //     element: <SuccessPage />,
