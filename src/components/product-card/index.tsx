@@ -1,7 +1,7 @@
 import { Product } from '../../types/product';
 import { Link } from 'react-router-dom';
 
-import formatCurrency from '@/lib/utils/formatCurrency';
+import { formatCurrency } from '@/lib';
 
 import styles from './product-card.module.css';
 

@@ -1,7 +1,4 @@
-type IconProps = {
-    size?: number;
-    color?: string;
-};
+import { IconProps } from '@/types/icon';
 
 function ErrorIcon(props: IconProps) {
     const { size = 48, color = 'currentColor' } = props;

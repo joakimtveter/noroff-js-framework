@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { removeItem, addQty, subtractQty } from '@/redux/cartSlice';
 
 import { CartItem } from '@/types/cart';
-import formatCurrency from '@/lib/utils/formatCurrency';
+import { formatCurrency } from '@/lib';
 
 import styles from './cart-item.module.css';
 

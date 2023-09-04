@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { addItem } from '@/redux/cartSlice';
 
 import { getProductById } from '@/api';
-import formatCurrency from '@/lib/utils/formatCurrency';
+import { formatCurrency } from '@/lib';
 
 // Import Components
 import Layout from '../components/layout';

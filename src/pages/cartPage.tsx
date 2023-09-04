@@ -1,8 +1,10 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+
+import { formatCurrency } from '@/lib';
+
 import Layout from '../components/layout';
 import CartItem from '@/components/cart-item';
-import formatCurrency from '@/lib/utils/formatCurrency';
 import ContentWrapper from '@/components/content-wrapper';
 
 import styles from './cartPage.module.css';
