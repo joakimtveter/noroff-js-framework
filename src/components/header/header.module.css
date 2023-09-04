@@ -1,0 +1,17 @@
+.header {
+    padding: 1em 2em;
+    border-bottom: 1px solid #ddd;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.branding {
+    max-width: 100px;
+}

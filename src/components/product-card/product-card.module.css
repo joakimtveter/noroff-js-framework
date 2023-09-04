@@ -1,0 +1,83 @@
+.card {
+    position: relative;
+    box-shadow: var(--shadow-300);
+}
+
+.card:hover,
+.card:focus-within {
+    box-shadow: var(--shadow-400);
+}
+
+.body {
+    padding: 0.75em;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+.link {
+    text-decoration: none;
+}
+.link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+    color: var(--color-text);
+    font-size: var(--fs-300);
+    margin: 0;
+}
+
+.price {
+    position: relative;
+    width: fit-content;
+    display: 'flex';
+    justify-content: flex-end;
+    margin-inline-start: auto;
+    margin-block-start: auto;
+    z-index: 11;
+}
+
+.old {
+    text-decoration: line-through;
+    color: var(--color-text-secondary);
+    text-decoration-color: var(--color-text-disabled);
+    margin-inline-end: 1em;
+}
+
+.current {
+    font-size: var(--fs-300);
+    font-weight: 600;
+}
+
+.description {
+    position: relative;
+    z-index: 11;
+}
+
+.discount {
+    --size: 60px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    height: var(--size);
+    width: var(--size);
+    top: 0.25em;
+    right: 0.25em;
+    background-color: red;
+    color: white;
+    font-size: 1.15rem;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.discount > * {
+    width: fit-content;
+}

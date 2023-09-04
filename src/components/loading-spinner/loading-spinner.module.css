@@ -1,0 +1,21 @@
+.container {
+    margin-inline: auto;
+    width: 50px;
+    height: 50px;
+}
+
+.spinner {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid var(--color-divider);
+    border-top-color: var(--color-primary);
+    border-right-color: var(--color-primary);
+    animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
