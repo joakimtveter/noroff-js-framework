@@ -1,0 +1,14 @@
+.card {
+    border: 1px solid #eaeaea;
+    padding: 1rem;
+    box-shadow: var(--shadow-300);
+}
+
+.description {
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+.username {
+    font-weight: bold;
+}

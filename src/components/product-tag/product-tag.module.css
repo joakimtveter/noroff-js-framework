@@ -1,0 +1,24 @@
+.tag {
+    padding: 0.1em 0.5em;
+    border-radius: 1000px;
+}
+
+.tag:nth-child(1) {
+    background-color: aquamarine;
+}
+
+.tag:nth-child(2) {
+    background-color: dodgerblue;
+}
+
+.tag:nth-child(3) {
+    background-color: gold;
+}
+
+.tag:nth-child(4) {
+    background-color: bisque;
+}
+
+.tag:nth-child(5) {
+    background-color: greenyellow;
+}

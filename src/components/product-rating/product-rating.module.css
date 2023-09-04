@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+
+    display: inline-block;
+    font-size: var(--star-size);
+    font-family: Times;
+    line-height: 1;
+}
+.stars::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-secondary) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

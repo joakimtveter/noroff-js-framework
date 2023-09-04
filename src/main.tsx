@@ -8,7 +8,7 @@ import { store } from '@/redux/store';
 
 // Import Pages for React Router
 import Homepage from '@/pages/homePage';
-// import ProductPage from '@/pages/productPage';
+import ProductPage from '@/pages/productPage';
 // import ContactPage from '@/pages/contactPage';
 // import CartPage from '@/pages/cartPage';
 // import SuccessPage from '@/pages/successPage';
@@ -23,10 +23,10 @@ const router = createBrowserRouter([
         element: <Homepage />,
         errorElement: <ErrorPage />,
     },
-    // {
-    //     path: 'product/:productId',
-    //     element: <ProductPage />,
-    // },
+    {
+        path: 'product/:productId',
+        element: <ProductPage />,
+    },
     // {
     //     path: 'contact',
     //     element: <ContactPage />,
