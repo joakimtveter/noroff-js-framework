@@ -1,5 +1,7 @@
 # Noroff Javascript Framework Course Assignment
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b2ec6104-e2ca-46e4-9bbf-e5224345a465/deploy-status)](https://app.netlify.com/sites/snazzy-quokka-4cc59f/deploys)
+
 ## Local Development Setup
 
 This project is using Vite.js as a bundler. To run the project locally, you will need to install the dependencies and run the dev server.
@@ -11,7 +13,7 @@ npm run dev
 
 ## Deployment
 
-This project is deployed to [Netlify](httos://netlify.com). The deployment is triggered automatically when a commit is pushed to the `main` branch.
+This project is automaticly deployed to [Netlify](httos://netlify.com). The deployment is triggered when a commit is pushed to the `main` branch. The site can be found at [https://noroff-javascript-frameworks.netlify.app](https://noroff-javascript-frameworks.netlify.app).
 
 ## Assignment
 
