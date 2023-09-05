@@ -1,6 +1,6 @@
 import { IconProps } from '@/types/icon';
 
-function ErrorIcon(props: IconProps) {
+export default function ErrorIcon(props: IconProps) {
     const { size = 48, color = 'currentColor' } = props;
 
     return (
@@ -14,5 +14,3 @@ function ErrorIcon(props: IconProps) {
         </svg>
     );
 }
-
-export default ErrorIcon;

@@ -1,7 +1,4 @@
-type IconProps = {
-    size?: string;
-    color?: string;
-};
+import { IconProps } from '@/types/icon';
 
 function CartIcon(props: IconProps) {
     const { size = 48, color = 'currentColor' } = props;

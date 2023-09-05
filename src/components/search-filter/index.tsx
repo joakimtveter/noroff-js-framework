@@ -1,3 +1,6 @@
+import SearchIcon from '@/icons/search';
+import styles from './search-filter.module.css';
+
 interface SearchFilterProps {
     searchTerm: string;
     handleSearch: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -6,8 +9,15 @@ interface SearchFilterProps {
 export default function SearchFilter(props: SearchFilterProps) {
     const { searchTerm, handleSearch } = props;
     return (
-        <div>
-            <input type='search' onChange={handleSearch} value={searchTerm} />
+        <div className={styles.container}>
+            <input
+                className={styles.input}
+                type='search'
+                onChange={handleSearch}
+                value={searchTerm}
+                placeholder={'Search for product...'}
+            />
+            <SearchIcon size={2} />
         </div>
     );
 }

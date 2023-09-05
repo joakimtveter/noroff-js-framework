@@ -1,0 +1,25 @@
+.button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.button:hover {
+    background-color: hsla(0, 0%, 0%, 0.051);
+    color: rebeccapurple; /* TODO: fix color*/
+    border-radius: 50%;
+}
+
+.circular {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    padding: 0.25rem;
+}
+
+.square {
+    border-radius: 0.25rem;
+    border: 1px solid currentColor;
+}

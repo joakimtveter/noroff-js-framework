@@ -23,16 +23,20 @@ export default function CartPage() {
                         <p>Your cart is empty</p>
                     ) : (
                         <>
-                            <table className={styles.table}>
+                            <table className={styles.table} role='table'>
                                 <CartItemsHeader />
-                                <tbody>
+                                <tbody role='rowgroup'>
                                     {cartItems.map((item: any) => (
                                         <CartItem key={item.id} {...item} />
                                     ))}
                                 </tbody>
-                                <tfoot className={styles.footer}>
+                                <tfoot className=''>
                                     <tr>
-                                        <td>Total: {formatCurrency(cartTotal)}</td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <th>Total</th>
+                                        <td className={styles.total}>{formatCurrency(cartTotal)}</td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -49,11 +53,11 @@ export default function CartPage() {
 
 function CartItemsHeader() {
     return (
-        <thead className={styles.header}>
+        <thead>
             <tr>
                 <th>Item</th>
                 <th>Quantity</th>
-                <th>Price</th>
+                <th>Unit Price</th>
                 <th>Total</th>
                 <th>Actions</th>
             </tr>

@@ -5,6 +5,11 @@ import { removeItem, addQty, subtractQty } from '@/redux/cartSlice';
 import { CartItem } from '@/types/cart';
 import { formatCurrency } from '@/lib';
 
+import IconButton from '@/components/icon-button';
+import SubtractIcon from '@/icons/subtract';
+import AddIcon from '@/icons/add';
+import DeleteIcon from '@/icons/delete';
+
 import styles from './cart-item.module.css';
 
 export default function CartItem(props: CartItem) {
@@ -12,15 +17,27 @@ export default function CartItem(props: CartItem) {
     const dispatch = useDispatch();
 
     return (
-        <tr className={styles.item}>
-            <td className={styles.details}>
-                <img className={styles.image} src={image} alt='' />
-                <p>{title}</p>
+        <tr>
+            <td role='cell'>
+                <div className={styles.details}>
+                    <img className={styles.image} src={image} alt='' />
+                    <p>{title}</p>
+                </div>
             </td>
-            <td className={styles.quantity}>
-                <button onClick={() => dispatch(subtractQty({ id, quantity: quantity - 1 }))}>-</button>
-                <div>{quantity}</div>
-                <button onClick={() => dispatch(addQty({ id, quantity: quantity + 1 }))}>+</button>
+            <td>
+                <div className={styles.quantity}>
+                    <IconButton
+                        icon={<SubtractIcon />}
+                        label={`Remove one ${title} from cart`}
+                        onClick={() => dispatch(subtractQty({ id, quantity: quantity - 1 }))}
+                    />
+                    <span style={{ paddingBottom: '5px' }}>{quantity}</span>
+                    <IconButton
+                        icon={<AddIcon />}
+                        label={`Add one more ${title} to cart`}
+                        onClick={() => dispatch(addQty({ id, quantity: quantity + 1 }))}
+                    />
+                </div>
             </td>
             <td>
                 <p>{formatCurrency(price)}</p>
@@ -29,8 +46,14 @@ export default function CartItem(props: CartItem) {
                 <p>{formatCurrency(price * quantity)}</p>
             </td>
             <td>
-                <Link to={`/product/${id}`}>View</Link>
-                <button onClick={() => dispatch(removeItem({ id, quantity }))}>Remove</button>
+                <Link to={`/product/${id}`}>
+                    View<span className='visually-hidden'>{title}</span>
+                </Link>
+                <IconButton
+                    icon={<DeleteIcon color={'red'} />}
+                    label={`Remove ${title} from cart`}
+                    onClick={() => dispatch(removeItem({ id, quantity }))}
+                />
             </td>
         </tr>
     );
