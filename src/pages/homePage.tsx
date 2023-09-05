@@ -27,7 +27,12 @@ function Homepage() {
         }
         setFilteredProducts(
             data.filter((product) => {
-                return product.title.toLowerCase().includes(searchTerm.toLowerCase());
+                // Check if the product title, description or tags includes the search term
+                // Only if the search term is a full tag string, will it be included.
+                if (product.title.toLowerCase().includes(searchTerm.toLowerCase())) return true;
+                if (product.description.toLowerCase().includes(searchTerm.toLowerCase())) return true;
+                if (product.tags.includes(searchTerm.toLowerCase())) return true;
+                return false;
             })
         );
     };
@@ -54,7 +59,13 @@ function Homepage() {
                         <LoadingSpinner />
                     ) : (
                         <>
-                            <h1 className='visually-hidden'>MyShop homepage</h1>
+                            <hgroup>
+                                <h1 className=''>Welcome to MyShop</h1>
+                                <p>
+                                    We hope you find what you are looking for. Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Asperiores natus, dolor error minus ipsa velit?
+                                </p>
+                            </hgroup>
                             <SearchFilter searchTerm={searchTerm} handleSearch={handleSearch} />
                             <ul className={styles.products}>
                                 {filteredProducts.map((product) => (

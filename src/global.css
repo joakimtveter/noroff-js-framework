@@ -134,11 +134,41 @@ h6,
     font-size: var(--fs-300);
 }
 
+hgroup > p {
+    font-size: var(--fs-500);
+    color: var(--color-text-secondary);
+    max-width: 60ch;
+    text-wrap: balance;
+}
+
 img {
     display: block;
     max-width: 100%;
 }
 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th:first-of-type {
+    text-align: left;
+}
+
+thead th {
+    padding: 0.05rem 0.5rem;
+    color: var(--color-light-text);
+    background-color: var(--color-accent);
+}
+
+td {
+    text-align: center;
+}
+
+/* td,
+th {
+    border: 1px solid hotpink;
+} */
 .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);

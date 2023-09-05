@@ -6,8 +6,8 @@
 }
 
 .image {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     object-fit: cover;
     border-radius: 0.25rem;
 }
@@ -21,5 +21,6 @@
 .quantity {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
 }
