@@ -1,5 +1,7 @@
 .card {
     position: relative;
+    display: flex;
+    flex-direction: column;
     box-shadow: var(--shadow-300);
 }
 
@@ -20,6 +22,7 @@
 }
 .link {
     text-decoration: none;
+    color: var(--color-primary);
 }
 .link::after {
     content: '';
@@ -34,27 +37,28 @@
     font-size: var(--fs-300);
     margin: 0;
 }
+.footer {
+    padding: 0 1rem;
+    margin-block-start: auto;
+}
 
 .price {
+    font-size: var(--fs-400);
+    font-weight: 600;
+    text-align: right;
     position: relative;
-    width: fit-content;
-    display: 'flex';
-    justify-content: flex-end;
-    margin-inline-start: auto;
-    margin-block-start: auto;
+    color: var(--color-accent);
+    font-size: var(--fs-400);
     z-index: 11;
 }
 
 .old {
-    text-decoration: line-through;
-    color: var(--color-text-secondary);
+    color: var(--color-text-disabled);
     text-decoration-color: var(--color-text-disabled);
-    margin-inline-end: 1em;
-}
-
-.current {
     font-size: var(--fs-300);
-    font-weight: 600;
+    text-decoration: line-through;
+    margin-block-start: auto;
+    margin-inline-end: 1em;
 }
 
 .description {
@@ -71,11 +75,12 @@
     width: var(--size);
     top: 0.25em;
     right: 0.25em;
-    background-color: red;
+    background-color: var(--color-accent);
     color: white;
     font-size: 1.15rem;
     font-weight: bold;
     border-radius: 50%;
+    transform: rotate(15deg);
 }
 
 .discount > * {

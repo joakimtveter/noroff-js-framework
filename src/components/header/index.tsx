@@ -13,8 +13,12 @@ export default function Header() {
                 </div>
                 <nav>
                     <Navigation>
-                        <Link to={'/'}>Products</Link>
-                        <Link to={'/contact'}>Contact us</Link>
+                        <Link className={styles.link} to={'/'}>
+                            Products
+                        </Link>
+                        <Link className={styles.link} to={'/contact'}>
+                            Contact us
+                        </Link>
                         <CartIcon />
                     </Navigation>
                 </nav>

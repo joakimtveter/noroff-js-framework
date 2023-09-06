@@ -29,6 +29,7 @@ function Homepage() {
             data.filter((product) => {
                 // Check if the product title, description or tags includes the search term
                 // Only if the search term is a full tag string, will it be included.
+                // This is by design, to avoid too many results.
                 if (product.title.toLowerCase().includes(searchTerm.toLowerCase())) return true;
                 if (product.description.toLowerCase().includes(searchTerm.toLowerCase())) return true;
                 if (product.tags.includes(searchTerm.toLowerCase())) return true;

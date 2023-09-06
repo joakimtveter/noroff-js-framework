@@ -12,7 +12,7 @@ function ProductCard(props: Product) {
 
     return (
         <>
-            <div className={styles.card}>
+            <li className={styles.card}>
                 <img className={styles.image} src={imageUrl} alt='' />
                 <div className={styles.body}>
                     <h3 className={styles.title}>
@@ -21,20 +21,21 @@ function ProductCard(props: Product) {
                         </Link>
                     </h3>
                     <p className={styles.description}> {description} </p>
-                    <p className={styles.price}>
-                        {isDiscounted && <span className={styles.old}> {formatCurrency(price)}</span>}
-                        <span className={styles.current}>
-                            {' '}
-                            {isDiscounted ? formatCurrency(discountedPrice) : formatCurrency(price)}
-                        </span>
-                    </p>
                     {isDiscounted && (
                         <div className={styles.discount}>
                             <div>–{discount}%</div>
                         </div>
                     )}
                 </div>
-            </div>
+                <div className={styles.footer}>
+                    <p className={styles.price}>
+                        {isDiscounted && <span className={styles.old}> {formatCurrency(price)}</span>}
+                        <span className={styles.current}>
+                            {isDiscounted ? formatCurrency(discountedPrice) : formatCurrency(price)}
+                        </span>
+                    </p>
+                </div>
+            </li>
         </>
     );
 }

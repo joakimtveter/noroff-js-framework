@@ -4,21 +4,21 @@
 }
 
 .tag:nth-child(1) {
-    background-color: aquamarine;
+    background-color: hsl(317, 32%, 67%);
 }
 
 .tag:nth-child(2) {
-    background-color: dodgerblue;
+    background-color: hsl(106, 32%, 84%);
 }
 
 .tag:nth-child(3) {
-    background-color: gold;
+    background-color: hsl(167, 31%, 88%);
 }
 
 .tag:nth-child(4) {
-    background-color: bisque;
+    background-color: hsl(15, 22%, 65%);
 }
 
 .tag:nth-child(5) {
-    background-color: greenyellow;
+    background-color: hsl(346, 23%, 63%);
 }

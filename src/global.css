@@ -1,5 +1,5 @@
 :root {
-    --header-width: 1100px;
+    --header-width: 1400px;
     --content-width: 1200px;
 
     --ff-heading: 'Montserrat', sans-serif;
@@ -15,9 +15,12 @@
     --fs-800: 4rem;
     --fs-900: 6rem;
 
-    --color-primary: #9ebda1;
-    --color-secondary: #c5d8c7;
-    --color-accent: #557c59;
+    --color-primary: hsl(291, 49%, 26%);
+    --color-accent: hsl(321, 49%, 49%);
+    --color-background-primary: hsl(260, 48%, 94%);
+    --color-background-secondary: hwb(321 84% 5%);
+    --color-background-light: hsl(0, 0%, 98%);
+    --color-background-medium: hsl(260, 32%, 91%);
 
     --color-text: hsla(0, 0%, 0%, 0.871);
     --color-text-secondary: hsla(0, 0%, 0%, 0.6);
@@ -85,7 +88,9 @@
 }
 
 body {
+    margin: 0;
     font-family: var(--ff-body);
+    background-color: var(--color-background-primary);
 }
 
 h1,
@@ -105,7 +110,7 @@ h6 {
 h1,
 .h1 {
     font-size: var(--fs-800);
-    color: var(--color-accent);
+    color: var(--color-primary);
     margin-bottom: 1rem;
 }
 
@@ -132,6 +137,10 @@ h5,
 h6,
 .h6 {
     font-size: var(--fs-300);
+}
+
+a {
+    color: var(--color-primary);
 }
 
 hgroup > p {
