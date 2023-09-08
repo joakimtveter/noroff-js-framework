@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
 import Layout from '@/components/layout';
-import ContentWrapper from '@/components/content-wrapper';
+import Container from '@/components/container';
 import TextField from '@/components/forms/textField';
 import TextArea from '@/components/forms/textArea';
 import ErrorSummary from '@/components/forms/errorSummary';
@@ -30,7 +30,6 @@ export default function ContactPage() {
         console.log('Contact form submission: ', data);
         reset({ name: '', subject: '', email: '', message: '' });
     };
-
     return (
         <>
             <Helmet>
@@ -42,15 +41,17 @@ export default function ContactPage() {
                 <meta name='keywords' content='Contact, Questions, Help' />
             </Helmet>
             <Layout>
-                <ContentWrapper>
-                    <h1>Contact Us</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus cumque nesciunt nobis
-                        praesentium labore nihil necessitatibus.
-                    </p>
+                <Container>
+                    <hgroup>
+                        <h1>Contact Us</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat minus cumque nesciunt nobis
+                            praesentium labore nihil necessitatibus.
+                        </p>
+                    </hgroup>
 
                     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-                        <ErrorSummary errors={errors} />
+                        {Object.keys(errors).length > 0 ? <ErrorSummary errors={errors} /> : null}
                         <TextField
                             name='name'
                             label='Full name'
@@ -75,7 +76,7 @@ export default function ContactPage() {
                         />
                         <Button type='submit'>Send message</Button>
                     </form>
-                </ContentWrapper>
+                </Container>
             </Layout>
         </>
     );

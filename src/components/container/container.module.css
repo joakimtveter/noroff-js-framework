@@ -1,0 +1,11 @@
+.content {
+    max-width: var(--content-width);
+}
+
+.max {
+    max-width: var(--content-width);
+}
+
+.container {
+    margin-inline: auto;
+}

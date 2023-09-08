@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 import { Product } from '../types/product';
 import ProductCard from '../components/product-card';
 import LoadingSpinner from '@/components/loading-spinner';
-import ContentWrapper from '@/components/content-wrapper';
+import Container from '@/components/container';
 import SearchFilter from '@/components/search-filter';
 
 import styles from './homePage.module.css';
@@ -55,7 +55,7 @@ function Homepage() {
                 <meta name='keywords' content='Webshop, Noroff' />
             </Helmet>
             <Layout>
-                <ContentWrapper>
+                <Container>
                     {data.length === 0 ? (
                         <LoadingSpinner />
                     ) : (
@@ -67,7 +67,11 @@ function Homepage() {
                                     adipisicing elit. Asperiores natus, dolor error minus ipsa velit?
                                 </p>
                             </hgroup>
-                            <SearchFilter searchTerm={searchTerm} handleSearch={handleSearch} />
+                            <SearchFilter
+                                searchTerm={searchTerm}
+                                results={filteredProducts.length}
+                                handleSearch={handleSearch}
+                            />
                             <ul className={styles.products}>
                                 {filteredProducts.map((product) => (
                                     <ProductCard key={product.id} {...product} />
@@ -75,7 +79,7 @@ function Homepage() {
                             </ul>
                         </>
                     )}
-                </ContentWrapper>
+                </Container>
             </Layout>
         </>
     );
