@@ -1,3 +1,5 @@
+import styles from './forms.module.css';
+
 interface ErrorSummaryProps {
     errors: Object;
 }
@@ -9,7 +11,7 @@ export default function ErrorSummary(props: ErrorSummaryProps) {
         errorList.push(value?.message);
     }
     return (
-        <div>
+        <div className={styles.errors}>
             <ul>
                 {errorList.map((message: any, index: number) => (
                     <li key={message + index}>{message}</li>

@@ -1,3 +1,5 @@
+import styles from './button.module.css';
+
 interface ButtonProps {
     children: React.ReactNode;
     startIcon?: React.ReactNode;
@@ -9,7 +11,7 @@ interface ButtonProps {
 export default function Button(props: ButtonProps) {
     const { children, startIcon, endIcon, type, ...remainingProps } = props;
     return (
-        <button type={type} {...remainingProps}>
+        <button className={`${styles.button} ${styles.primary}`} type={type} {...remainingProps}>
             {startIcon}
             {children}
             {endIcon}

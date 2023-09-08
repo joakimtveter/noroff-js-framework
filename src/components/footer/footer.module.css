@@ -1,0 +1,19 @@
+.footer {
+    margin-top: 1rem;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding-block: 1rem;
+    outline-color: #ffffff;
+}
+
+.text {
+    margin: 0;
+}
+
+.footer a {
+    color: var(--color-background-secondary);
+}
+
+.footer a:hover {
+    color: #ffffff;
+}

@@ -5,7 +5,7 @@ import { formatCurrency } from '@/lib';
 
 import Layout from '../components/layout';
 import CartItem from '@/components/cart-item';
-import ContentWrapper from '@/components/content-wrapper';
+import Container from '@/components/container';
 
 import styles from './cartPage.module.css';
 
@@ -17,7 +17,7 @@ export default function CartPage() {
     return (
         <>
             <Layout>
-                <ContentWrapper>
+                <Container>
                     <h1>My cart</h1>
                     {cartItems.length === 0 ? (
                         <p>Your cart is empty</p>
@@ -45,7 +45,7 @@ export default function CartPage() {
                             </div>
                         </>
                     )}
-                </ContentWrapper>
+                </Container>
             </Layout>
         </>
     );

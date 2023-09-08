@@ -23,7 +23,7 @@
 }
 
 .tags {
-    margin: 0;
+    margin: 1rem 0;
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -49,4 +49,37 @@
 
 .content {
     padding-inline: 2rem;
+}
+.currentPrice {
+    text-align: end;
+    font-size: var(--fs-700);
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.description {
+    font-size: var(--fs-400);
+    font-weight: 400;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    font-size: var(--fs-400);
+    text-align: center;
+    width: 3ch;
+    border: 2px solid var(--color-primary);
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input[type='number'] {
+    -moz-appearance: textfield;
 }

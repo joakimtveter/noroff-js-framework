@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Navigation from '@/components/navigation';
 import CartIcon from '@/components/cart-icon';
 
@@ -9,17 +9,23 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.wrapper}>
                 <div className={styles.branding}>
-                    <Link to={'/'}>MyStore</Link>
+                    <NavLink to={'/'}>MyStore</NavLink>
                 </div>
                 <nav>
                     <Navigation>
-                        <Link className={styles.link} to={'/'}>
-                            Products
-                        </Link>
-                        <Link className={styles.link} to={'/contact'}>
-                            Contact us
-                        </Link>
-                        <CartIcon />
+                        <li>
+                            <NavLink to={'/'} className={styles.link}>
+                                Products
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink className={styles.link} to={'/contact'}>
+                                Contact us
+                            </NavLink>
+                        </li>
+                        <li>
+                            <CartIcon />
+                        </li>
                     </Navigation>
                 </nav>
             </div>

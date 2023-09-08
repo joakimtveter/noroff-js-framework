@@ -36,3 +36,13 @@
 .submit {
     background-color: var(--color-primary);
 }
+
+.errors {
+    padding: 1rem 3rem;
+    color: var(--color-error);
+    border: 2px solid var(--color-error);
+}
+
+.errors ul {
+    padding: 0;
+}

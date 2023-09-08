@@ -15,7 +15,11 @@
 .stars::before {
     content: '★★★★★';
     letter-spacing: 3px;
-    background: linear-gradient(90deg, var(--color-accent) var(--percent), var(--color-secondary) var(--percent));
+    background: linear-gradient(
+        90deg,
+        var(--color-accent) var(--percent),
+        var(--color-background-secondary) var(--percent)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

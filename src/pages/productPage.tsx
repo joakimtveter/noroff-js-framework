@@ -10,7 +10,7 @@ import { formatCurrency } from '@/lib';
 
 // Import Components
 import Layout from '../components/layout';
-import ContentWrapper from '@/components/content-wrapper';
+import Container from '@/components/container';
 import TwoColumnLayout from '@/components/two-column-layout';
 import ReviewCard from '@/components/review-card';
 import ProductTag from '@/components/product-tag';
@@ -20,6 +20,10 @@ import ProductRating from '@/components/product-rating';
 import styles from './productPage.module.css';
 import LoadingSpinner from '@/components/loading-spinner';
 import { CartItem } from '@/types/cart';
+import Button from '@/components/button';
+import AddIcon from '@/icons/add';
+import IconButton from '@/components/icon-button';
+import SubtractIcon from '@/icons/subtract';
 
 function ProductPage() {
     const { productId } = useParams();
@@ -68,7 +72,7 @@ function ProductPage() {
                 </Helmet>
                 {data ? (
                     <>
-                        <ContentWrapper>
+                        <Container>
                             <TwoColumnLayout>
                                 <div className={styles.image}>
                                     <picture>
@@ -97,23 +101,36 @@ function ProductPage() {
                                                 {formatCurrency(data.price)}
                                             </p>
                                         )}
-                                        <p>
+                                        <p className={styles.currentPrice}>
                                             <span className='visually-hidden'>Price:</span>
                                             {formatCurrency(data.discountedPrice)}
                                         </p>
                                     </div>
-                                    <form onSubmit={(e) => handleSubmit(e)}>
-                                        <label htmlFor='quantity'>Quantity</label>
+                                    <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
+                                        <label htmlFor='quantity' className='visually-hidden'>
+                                            Quantity
+                                        </label>
+                                        <IconButton
+                                            icon={<SubtractIcon />}
+                                            label='Decrease quantity'
+                                            onClick={() => setQuantity(quantity - 1)}
+                                        />
                                         <input
+                                            className={styles.input}
                                             type='number'
                                             name='quantity'
                                             id='quantity'
                                             min={1}
-                                            max={5}
+                                            max={9}
                                             value={quantity}
                                             onChange={(e) => setQuantity(parseInt(e.target.value))}
                                         />
-                                        <button type='submit'>Add to cart</button>
+                                        <IconButton
+                                            icon={<AddIcon />}
+                                            label='Increase quantity'
+                                            onClick={() => setQuantity(quantity + 1)}
+                                        />
+                                        <Button type='submit'>Add to cart</Button>
                                     </form>
                                     {data?.reviews.length > 0 && (
                                         <div>
@@ -127,7 +144,7 @@ function ProductPage() {
                                     )}
                                 </div>
                             </TwoColumnLayout>
-                        </ContentWrapper>
+                        </Container>
                     </>
                 ) : (
                     <LoadingSpinner />
