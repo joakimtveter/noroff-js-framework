@@ -24,7 +24,6 @@ import Button from '@/components/button';
 import AddIcon from '@/icons/add';
 import IconButton from '@/components/icon-button';
 import SubtractIcon from '@/icons/subtract';
-import { set } from 'react-hook-form';
 
 function ProductPage() {
     const { productId } = useParams();

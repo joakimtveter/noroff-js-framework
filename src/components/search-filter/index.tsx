@@ -10,7 +10,7 @@ interface SearchFilterProps {
 export default function SearchFilter(props: SearchFilterProps) {
     const { searchTerm, handleSearch, results = 0 } = props;
     return (
-        <div>
+        <div className={styles.search}>
             <div className={styles.container}>
                 <input
                     className={styles.input}
