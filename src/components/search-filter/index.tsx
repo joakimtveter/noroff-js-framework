@@ -21,7 +21,7 @@ export default function SearchFilter(props: SearchFilterProps) {
                 />
                 <SearchIcon size={2} />
             </div>
-            <p>{results} products</p>
+            <p aria-live='polite'>{results} products</p>
         </div>
     );
 }

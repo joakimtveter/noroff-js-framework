@@ -1,20 +1,18 @@
 import styles from './icon-button.module.css';
 
-interface IconButtonProps {
+interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     icon: React.ReactNode;
     label: string;
-    style?: 'default' | 'circular' | 'square';
-    type?: 'button' | 'submit' | 'reset';
-    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    buttonStyle?: 'default' | 'circular' | 'square';
 }
 
 export default function Button(props: IconButtonProps) {
-    const { icon, type = 'button', style = 'default', label, ...remainingProps } = props;
+    const { icon, type = 'button', buttonStyle = 'default', label, ...remainingProps } = props;
     return (
         <button
-            className={`${style === 'circular' ? styles.circular : ''} ${style === 'square' ? styles.square : ''} ${
-                styles.button
-            }`}
+            className={`${buttonStyle === 'circular' ? styles.circular : ''} ${
+                buttonStyle === 'square' ? styles.square : ''
+            } ${styles.button}`}
             type={type}
             {...remainingProps}>
             <div>{icon}</div>
