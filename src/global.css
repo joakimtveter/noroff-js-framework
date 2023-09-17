@@ -19,8 +19,8 @@
     --color-accent: hsl(321, 49%, 49%);
     --color-background-primary: hsl(260, 48%, 94%);
     --color-background-secondary: hwb(321 84% 5%);
-    --color-background-light: hsl(0, 0%, 98%);
-    --color-background-medium: hsl(260, 32%, 91%);
+    --color-background-medium: hsl(264, 50%, 96%);
+    --color-background-light: hsl(260, 60%, 99%);
 
     --color-text: hsla(0, 0%, 0%, 0.871);
     --color-text-secondary: hsla(0, 0%, 0%, 0.6);
@@ -33,14 +33,9 @@
     --color-light-divider: rgba(0, 0, 0, 0.12);
 
     --color-success: #4caf50;
-    --color-error: #d32f2f;
+    --color-error: #c72828;
     --color-warning: #ff9800;
     --color-info: #0288d1;
-
-    --color-darkmode-success: #66bb6a;
-    --color-darkmode-error: #f44336;
-    --color-darkmode-warning: #ffa726;
-    --color-darkmode-info: #29b6f6;
 
     --star-color: #dddddd;
     --star-background: #fc0;
@@ -209,4 +204,8 @@ th {
     position: absolute;
     white-space: nowrap;
     width: 1px;
+}
+
+*:focus {
+    outline: 2px solid var(--color-accent);
 }

@@ -11,7 +11,8 @@ export default function ErrorSummary(props: ErrorSummaryProps) {
         errorList.push(value?.message);
     }
     return (
-        <div className={styles.errors}>
+        <div className={styles.errors} aria-live='polite'>
+            <p>The form can not be submitted due to these errors:</p>
             <ul>
                 {errorList.map((message: any, index: number) => (
                     <li key={message + index}>{message}</li>

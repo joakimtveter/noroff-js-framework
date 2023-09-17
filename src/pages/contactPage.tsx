@@ -51,7 +51,6 @@ export default function ContactPage() {
                     </hgroup>
 
                     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-                        {Object.keys(errors).length > 0 ? <ErrorSummary errors={errors} /> : null}
                         <TextField
                             name='name'
                             label='Full name'
@@ -74,6 +73,7 @@ export default function ContactPage() {
                             register={register}
                             error={errors}
                         />
+                        {Object.keys(errors).length > 0 ? <ErrorSummary errors={errors} /> : null}
                         <Button type='submit'>Send message</Button>
                     </form>
                 </Container>
