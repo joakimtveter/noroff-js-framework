@@ -1,7 +1,8 @@
 .card {
-    border: 1px solid #eaeaea;
     padding: 1rem;
     box-shadow: var(--shadow-300);
+    background-color: var(--color-background-medium);
+    margin-bottom: 1rem;
 }
 
 .description {
@@ -11,4 +12,5 @@
 
 .username {
     font-weight: bold;
+    color: var(--color-primary);
 }

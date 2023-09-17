@@ -24,6 +24,7 @@ import Button from '@/components/button';
 import AddIcon from '@/icons/add';
 import IconButton from '@/components/icon-button';
 import SubtractIcon from '@/icons/subtract';
+import { set } from 'react-hook-form';
 
 function ProductPage() {
     const { productId } = useParams();
@@ -44,6 +45,7 @@ function ProductPage() {
         };
 
         dispatch(addItem(item));
+        setQuantity(1);
     };
 
     const getdata = async () => {
@@ -92,7 +94,9 @@ function ProductPage() {
                                             <ProductTag key={tag}>{tag}</ProductTag>
                                         ))}
                                     </ul>
-                                    <ProductRating rating={data.rating} size={28} raters={data.reviews.length} />
+                                    {data?.rating > 0 ? (
+                                        <ProductRating rating={data.rating} size={28} raters={data.reviews.length} />
+                                    ) : null}
                                     <p className={styles.description}>{data?.description}</p>
                                     <div className={styles.price}>
                                         {isDiscounted && (
@@ -111,6 +115,7 @@ function ProductPage() {
                                             Quantity
                                         </label>
                                         <IconButton
+                                            disabled={Boolean(quantity < 2)}
                                             icon={<SubtractIcon />}
                                             label='Decrease quantity'
                                             onClick={() => setQuantity(quantity - 1)}
