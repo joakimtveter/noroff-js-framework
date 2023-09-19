@@ -10,5 +10,24 @@
     border-top: 1px solid #e0e0e0;
 }
 .total {
+    font-size: var(--fs-500);
+    font-weight: 600;
     margin-left: auto;
+    margin-block: 2rem;
+}
+
+.checkout {
+    display: block;
+    text-decoration: none;
+    background-color: var(--color-accent);
+    color: var(--color-light-text);
+    font-size: var(--fs-400);
+    padding: 0.5rem 1rem;
+    width: max-content;
+    margin-inline-start: auto;
+}
+
+.checkout:hover,
+.checkout:focus {
+    background-color: var(--color-primary);
 }

@@ -16,6 +16,18 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    text-decoration: none;
+}
+
+.details:hover p {
+    text-decoration: underline;
+}
+
+.details p {
+    font-size: var(--fs-400);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-text);
 }
 
 .quantity {
@@ -23,4 +35,16 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.total p {
+    font-weight: 600;
+    margin: 0;
 }

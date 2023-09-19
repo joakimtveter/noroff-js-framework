@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 
 import { formatCurrency } from '@/lib';
 
-import Layout from '../components/layout';
+import Layout from '@/components/layout';
 import CartItem from '@/components/cart-item';
 import Container from '@/components/container';
 
 import styles from './cartPage.module.css';
+import { Helmet } from 'react-helmet-async';
 
 export default function CartPage() {
     const cart = useSelector((state: any) => state.cart);
@@ -16,6 +17,9 @@ export default function CartPage() {
 
     return (
         <>
+            <Helmet>
+                <title>Cart | MyStore</title>
+            </Helmet>
             <Layout>
                 <Container>
                     <h1>My cart</h1>
@@ -24,43 +28,31 @@ export default function CartPage() {
                     ) : (
                         <>
                             <table className={styles.table} role='table'>
-                                <CartItemsHeader />
+                                <thead>
+                                    <tr>
+                                        <th className={styles.thItem}>Item</th>
+                                        <th className={styles.thQty}>Quantity</th>
+                                        <th className={styles.thPrice}>Total</th>
+                                    </tr>
+                                </thead>
                                 <tbody role='rowgroup'>
                                     {cartItems.map((item: any) => (
                                         <CartItem key={item.id} {...item} />
                                     ))}
                                 </tbody>
-                                <tfoot className=''>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-
-                                        <th>Total</th>
-                                        <td className={styles.total}>{formatCurrency(cartTotal)}</td>
-                                    </tr>
-                                </tfoot>
                             </table>
                             <div>
-                                <Link to={'/checkout-success'}>Checkout</Link>
+                                <p className={styles.total}> Total: {formatCurrency(cartTotal)}</p>
+                            </div>
+                            <div>
+                                <Link className={styles.checkout} to={'/checkout-success'}>
+                                    Checkout
+                                </Link>
                             </div>
                         </>
                     )}
                 </Container>
             </Layout>
         </>
-    );
-}
-
-function CartItemsHeader() {
-    return (
-        <thead>
-            <tr>
-                <th>Item</th>
-                <th>Quantity</th>
-                <th>Unit Price</th>
-                <th>Total</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
     );
 }

@@ -56,7 +56,6 @@ function ProductPage() {
     useEffect(() => {
         getdata();
     }, []);
-    console.log(data);
 
     const isDiscounted = data?.discountedPrice && data?.discountedPrice < data?.price ? true : false;
     const discountPercentage = data?.discountedPrice

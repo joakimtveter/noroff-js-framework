@@ -19,10 +19,10 @@ export default function CartItem(props: CartItem) {
     return (
         <tr>
             <td role='cell'>
-                <div className={styles.details}>
+                <Link to={`/product/${id}`} className={styles.details}>
                     <img className={styles.image} src={image} alt='' />
                     <p>{title}</p>
-                </div>
+                </Link>
             </td>
             <td>
                 <div className={styles.quantity}>
@@ -40,20 +40,15 @@ export default function CartItem(props: CartItem) {
                 </div>
             </td>
             <td>
-                <p>{formatCurrency(price)}</p>
-            </td>
-            <td>
-                <p>{formatCurrency(price * quantity)}</p>
-            </td>
-            <td>
-                <Link to={`/product/${id}`}>
-                    View<span className='visually-hidden'>{title}</span>
-                </Link>
-                <IconButton
-                    icon={<DeleteIcon color={'red'} />}
-                    label={`Remove ${title} from cart`}
-                    onClick={() => dispatch(removeItem({ id, quantity }))}
-                />
+                <div className={styles.total}>
+                    <p>{formatCurrency(price)}</p>
+                    <p>{formatCurrency(price * quantity)}</p>
+                    <IconButton
+                        icon={<DeleteIcon color={'red'} />}
+                        label={`Remove ${title} from cart`}
+                        onClick={() => dispatch(removeItem({ id, quantity }))}
+                    />
+                </div>
             </td>
         </tr>
     );
