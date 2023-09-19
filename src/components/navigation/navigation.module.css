@@ -5,7 +5,23 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-content: center;
+    align-items: center;
     list-style-type: none;
     gap: 1em;
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    .nav {
+        align-self: stretch;
+    }
+    .list {
+        gap: 0.25rem;
+    }
+}
+
+@media (max-width: 364px) {
+    .list {
+        justify-content: center;
+    }
 }

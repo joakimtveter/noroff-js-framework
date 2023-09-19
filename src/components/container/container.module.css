@@ -9,3 +9,21 @@
 .container {
     margin-inline: auto;
 }
+
+@media (max-width: 375px) {
+    .container {
+        padding-inline: 0.5rem;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 900px) {
+    .container {
+        padding-inline: 1rem;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1250px) {
+    .container {
+        padding-inline: 2rem;
+    }
+}

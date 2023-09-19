@@ -93,3 +93,15 @@
 .input[type='number'] {
     -moz-appearance: textfield;
 }
+
+@media (max-width: 600px) {
+    .content {
+        padding-inline: 1rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .content {
+        padding-inline: 0.5rem;
+    }
+}

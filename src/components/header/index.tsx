@@ -11,23 +11,22 @@ export default function Header() {
                 <div className={styles.branding}>
                     <NavLink to={'/'}>MyStore</NavLink>
                 </div>
-                <nav>
-                    <Navigation>
-                        <li>
-                            <NavLink to={'/'} className={styles.link}>
-                                Products
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink className={styles.link} to={'/contact'}>
-                                Contact us
-                            </NavLink>
-                        </li>
-                        <li>
-                            <CartIcon />
-                        </li>
-                    </Navigation>
-                </nav>
+
+                <Navigation>
+                    <li>
+                        <NavLink to={'/'} className={styles.link}>
+                            Products
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={styles.link} to={'/contact'}>
+                            Contact us
+                        </NavLink>
+                    </li>
+                    <li>
+                        <CartIcon />
+                    </li>
+                </Navigation>
             </div>
         </header>
     );

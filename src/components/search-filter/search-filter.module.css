@@ -18,15 +18,17 @@
     align-items: center;
     height: 40px;
     border: 2px solid var(--color-primary);
-    width: fit-content;
+    width: 100%;
     border-radius: 0.75rem;
+    max-width: 375px;
+    background-color: var(--color-background-light);
 }
 
 .input {
     padding-inline: 0.5rem;
     border: none;
     height: 100%;
-    width: 300px;
+    width: 100%;
     border-radius: 0.75rem;
     font-size: var(--fs-400);
 }
@@ -44,4 +46,16 @@
 .container:focus-within {
     outline: 3px solid var(--color-accent);
     outline-offset: 2px;
+}
+
+@media (width < 500px) {
+    .search {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .search > p {
+        font-size: var(--fs-300);
+    }
 }
