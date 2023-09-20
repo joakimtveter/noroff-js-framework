@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useDispatch, useSelector } from 'react-redux';
 import { resetCart } from '@/redux/cartSlice';
+
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 import Layout from '@/components/layout';
 import Container from '@/components/container';
@@ -38,6 +40,8 @@ export default function SuccessPage() {
                             </li>
                         ))}
                     </ul>
+
+                    <Link to='/'>Go to front page</Link>
                 </Container>
             </Layout>
         </>
