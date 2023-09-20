@@ -108,7 +108,7 @@ function ProductPage() {
                                             {formatCurrency(data.discountedPrice)}
                                         </p>
                                     </div>
-                                    <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
+                                    <form className={styles.form} onSubmit={handleSubmit}>
                                         <label htmlFor='quantity' className='visually-hidden'>
                                             Quantity
                                         </label>

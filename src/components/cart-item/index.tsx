@@ -40,8 +40,10 @@ export default function CartItem(props: CartItem) {
                 </div>
             </td>
             <td>
+                <p>{formatCurrency(price)}</p>
+            </td>
+            <td>
                 <div className={styles.total}>
-                    <p>{formatCurrency(price)}</p>
                     <p>{formatCurrency(price * quantity)}</p>
                     <IconButton
                         icon={<DeleteIcon color={'red'} />}

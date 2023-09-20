@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +9,6 @@ import CartItem from '@/components/cart-item';
 import Container from '@/components/container';
 
 import styles from './cartPage.module.css';
-import { Helmet } from 'react-helmet-async';
 
 export default function CartPage() {
     const cart = useSelector((state: any) => state.cart);
@@ -32,7 +32,8 @@ export default function CartPage() {
                                     <tr>
                                         <th className={styles.thItem}>Item</th>
                                         <th className={styles.thQty}>Quantity</th>
-                                        <th className={styles.thPrice}>Total</th>
+                                        <th className={styles.thPrice}>Price</th>
+                                        <th className={styles.thTotal}>Total</th>
                                     </tr>
                                 </thead>
                                 <tbody role='rowgroup'>
