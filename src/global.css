@@ -205,6 +205,14 @@ th {
     white-space: nowrap;
     width: 1px;
 }
+.skip-link:focus {
+    clip: auto !important;
+    clip-path: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    white-space: inherit !important;
+    width: auto !important;
+}
 
 *:focus {
     outline: 2px solid var(--color-accent);

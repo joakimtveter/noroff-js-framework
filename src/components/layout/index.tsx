@@ -1,5 +1,6 @@
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import SkipLink from '../skip-link';
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -9,8 +10,11 @@ interface LayoutProps {
 function Layout(props: LayoutProps) {
     return (
         <>
+            <SkipLink />
             <Header />
-            <main className={props.mainClassName}>{props.children}</main>
+            <main id='content' className={props.mainClassName}>
+                {props.children}
+            </main>
             <Footer />
         </>
     );
