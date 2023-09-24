@@ -18,7 +18,13 @@ function TextArea(props: TextAreaProps) {
             <label className={styles.label} htmlFor={`${name}-field`}>
                 {label + ':'}
             </label>
-            <textarea {...register(name)} id={`${name}-field`} className={styles.textarea} {...textareaProps} />
+            <textarea
+                {...register(name)}
+                id={`${name}-field`}
+                className={styles.textarea}
+                rows={5}
+                {...textareaProps}
+            />
             {hasError ? (
                 <div className={styles.error}>
                     <ErrorIcon size={16} />
