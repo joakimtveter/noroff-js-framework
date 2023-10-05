@@ -9,7 +9,7 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.wrapper}>
                 <div className={styles.branding}>
-                    <NavLink to={'/'}>MyStore</NavLink>
+                    <NavLink to={'/'}>MyShop</NavLink>
                 </div>
 
                 <Navigation>

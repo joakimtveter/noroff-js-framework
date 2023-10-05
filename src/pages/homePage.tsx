@@ -11,6 +11,7 @@ import Container from '@/components/container';
 import SearchFilter from '@/components/search-filter';
 
 import styles from './homePage.module.css';
+import LookaheadSearch from '@/components/lookahead-search';
 
 function Homepage() {
     const [data, setData] = useState<Array<Product>>([]);
@@ -67,6 +68,7 @@ function Homepage() {
                                     adipisicing elit. Asperiores natus, dolor error minus ipsa velit?
                                 </p>
                             </hgroup>
+                            <LookaheadSearch products={data} />
                             <SearchFilter
                                 searchTerm={searchTerm}
                                 results={filteredProducts.length}

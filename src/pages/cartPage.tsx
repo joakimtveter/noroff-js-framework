@@ -18,7 +18,7 @@ export default function CartPage() {
     return (
         <>
             <Helmet>
-                <title>Cart | MyStore</title>
+                <title>Cart | MyShop</title>
             </Helmet>
             <Layout>
                 <Container>

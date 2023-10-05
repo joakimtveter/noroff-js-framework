@@ -33,7 +33,7 @@ export default function ContactPage() {
     return (
         <>
             <Helmet>
-                <title>{'Contact Us - MyStore'}</title>
+                <title>{'Contact Us - MyShop'}</title>
                 <meta
                     name='description'
                     content='Contact us for any questions you might have. This page is a school assignment submission, no actual products are sold on this site.'
