@@ -48,3 +48,7 @@
     font-weight: 600;
     margin: 0;
 }
+
+.tdTotal {
+    max-width: 150px;
+}

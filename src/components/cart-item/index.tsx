@@ -42,7 +42,7 @@ export default function CartItem(props: CartItem) {
             <td>
                 <p>{formatCurrency(price)}</p>
             </td>
-            <td>
+            <td className={styles.tdTotal}>
                 <div className={styles.total}>
                     <p>{formatCurrency(price * quantity)}</p>
                     <IconButton
