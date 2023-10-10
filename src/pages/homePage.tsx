@@ -62,7 +62,7 @@ function Homepage() {
                     ) : (
                         <>
                             <hgroup>
-                                <h1 className=''>Welcome to MyShop</h1>
+                                <h1>Welcome to MyShop</h1>
                                 <p>
                                     We hope you find what you are looking for. Lorem ipsum, dolor sit amet consectetur
                                     adipisicing elit. Asperiores natus, dolor error minus ipsa velit?

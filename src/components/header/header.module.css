@@ -14,7 +14,12 @@
 }
 
 .branding {
-    max-width: 100px;
+    font-size: var(--fs-500);
+    font-weight: 600;
+}
+
+.branding a {
+    text-decoration: none;
 }
 
 .link {
@@ -42,7 +47,7 @@
     }
 
     .branding {
-        max-width: 75px;
+        margin-inline: auto;
     }
 
     .link {

@@ -9,9 +9,10 @@ import Layout from '@/components/layout';
 import Container from '@/components/container';
 
 export default function SuccessPage() {
-    const [order, setOrder] = useState([]);
     const dispatch = useDispatch();
     const cart = useSelector((state: any) => state.cart);
+    const [order, setOrder] = useState([]);
+    const orderNumber = Math.floor(Math.random() * 1000000000);
 
     const handleCheckout = () => {
         setOrder(cart.contents);
@@ -24,13 +25,13 @@ export default function SuccessPage() {
     return (
         <>
             <Helmet>
-                <title>{'Success Page'}</title>
+                <title>{`Order ${orderNumber} Confirmed`} </title>
             </Helmet>
             <Layout>
                 <Container>
                     <h1>Order confirmation</h1>
                     <p>Thank you for your order!</p>
-                    <p>Your order number is: {Math.floor(Math.random() * 1000000000)}</p>
+                    <p>Your order number is: {orderNumber}</p>
 
                     <p>Your order:</p>
                     <ul>
