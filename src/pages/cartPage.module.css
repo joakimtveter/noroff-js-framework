@@ -1,33 +1,105 @@
-.table {
-    width: 100%;
+.cartList {
+    display: grid;
+    grid-template-columns: minmax(auto, 5fr) 1fr 1fr 1fr;
+    padding: 0;
+    gap: 1rem;
+}
+.item {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: 1/-1;
 }
 
-.footer {
+.details {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+.details:hover {
+    text-decoration: underline;
+}
+
+.details p {
+    font-size: var(--fs-300);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.itemQuantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+.itemPrice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTotal {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 8px 0;
-    border-top: 1px solid #e0e0e0;
+    gap: 1rem;
 }
+
+.image {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
 .total {
-    font-size: var(--fs-500);
+    background-color: var(--color-background-secondary);
+    width: max-content;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    margin-inline-start: auto;
+    margin-block-start: 2rem;
+    text-align: end;
+}
+.total p {
+    font-size: var(--fs-300);
     font-weight: 600;
     margin-left: auto;
-    margin-block: 2rem;
+    margin-block: 0;
+}
+.total span {
+    font-weight: 400;
 }
 
 .checkout {
     display: block;
     text-decoration: none;
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
     color: var(--color-light-text);
     font-size: var(--fs-400);
     padding: 0.5rem 1rem;
     width: max-content;
     margin-inline-start: auto;
+    margin-block-start: 2rem;
 }
 
 .checkout:hover,
 .checkout:focus {
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
+}
+
+@media (width < 600px) {
+    .cartList {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .details {
+        grid-column: span 3;
+        place-items: center;
+    }
+    .total p {
+        font-size: var(--fs-200);
+    }
 }
