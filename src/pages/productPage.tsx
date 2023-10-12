@@ -135,17 +135,17 @@ function ProductPage() {
                                         />
                                         <Button type='submit'>Add to cart</Button>
                                     </form>
-                                    {data?.reviews.length > 0 && (
-                                        <div>
-                                            <h2 className={styles.h2}>Reviews: ({data.reviews.length})</h2>
-                                            <ul className={styles.reviews}>
-                                                {data.reviews.map((review) => (
-                                                    <ReviewCard key={review.id} {...review} />
-                                                ))}
-                                            </ul>
-                                        </div>
-                                    )}
                                 </div>
+                                {data?.reviews.length > 0 && (
+                                    <div>
+                                        <h2 className={styles.h2}>Reviews: ({data.reviews.length})</h2>
+                                        <ul className={styles.reviews}>
+                                            {data.reviews.map((review) => (
+                                                <ReviewCard key={review.id} {...review} />
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
                             </TwoColumnLayout>
                         </Container>
                     </>
