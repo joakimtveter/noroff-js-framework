@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b2ec6104-e2ca-46e4-9bbf-e5224345a465/deploy-status)](https://app.netlify.com/sites/snazzy-quokka-4cc59f/deploys)
 
-![image](https://jsf.tveter.dev/screenshot3.png)
+![image](https://jsf.tveter.dev/screenshot.png)
 
 ## Local Development
 
