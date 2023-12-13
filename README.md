@@ -1,8 +1,8 @@
-# Noroff Javascript Framework Course Assignment
+# Noroff JavaScript Framework Course Assignment
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b2ec6104-e2ca-46e4-9bbf-e5224345a465/deploy-status)](https://app.netlify.com/sites/snazzy-quokka-4cc59f/deploys)
 
-![image](https://jsf.tveter.dev/screenshot.png)
+![image](https://jsf.tveter.dev/screenshot3.png)
 
 ## Local Development
 
